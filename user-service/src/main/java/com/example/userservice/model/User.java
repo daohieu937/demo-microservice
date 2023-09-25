@@ -1,11 +1,10 @@
 package com.example.userservice.model;
 
-import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.*;
 import java.util.Collection;
-import java.util.UUID;
 
 @Entity
 @Data
@@ -17,7 +16,7 @@ public class User {
     @Column
     @Id
     private String id;
-    @Column
+    @Column(unique=true)
     private String username;
     @Column
     private String password;
