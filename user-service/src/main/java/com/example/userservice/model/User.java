@@ -8,20 +8,24 @@ import java.util.Collection;
 
 @Entity
 @Data
+@Table(name = "user")
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-
-    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column
     @Id
+    @Column
+    @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
     @Column(unique=true)
     private String username;
     @Column
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(

@@ -9,7 +9,6 @@ import java.util.List;
 @Setter
 @Getter
 public class UserDto {
-//    private UUID id = UUID.randomUUID();
     private String username;
     private String password;
     private List<RoleType> roleDto;

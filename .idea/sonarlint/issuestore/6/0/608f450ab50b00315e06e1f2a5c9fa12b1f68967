@@ -1,3 +1,7 @@
 
-v
-java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.SpringBootApplication'.(Ë”ÖÏ8÷Àôß«1
+}
+java:S1128"[Remove this unused import 'org.springframework.boot.autoconfigure.EnableAutoConfiguration'.(æèþÞøÿÿÿÿ8Ïö¡Ñ¬1
+‹
+java:S1128"nRemove this unused import 'org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration'.(Ûæ„ƒ8‡³€é¬1
+š
+java:S1128"xRemove this unused import 'org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration'.(Òˆ÷âøÿÿÿÿ8Ïö¡Ñ¬1

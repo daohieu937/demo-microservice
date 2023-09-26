@@ -53,21 +53,8 @@ public class UserService {
 
     public UserResponse getUser(String username) {
         User user = userRepository.findByUsername(username);
-        UserResponse userResponse = new UserResponse();
-        userResponse.setId(user.getId());
-        userResponse.setUsername(user.getUsername());
-        List<RoleResponse> roles = new ArrayList<>();
-
-        user.getRoles().forEach(role -> {
-            RoleResponse roleResponse = new RoleResponse();
-            roleResponse.setRoleType(role.getRoleType());
-            roles.add(roleResponse);
-        });
-
-        userResponse.setRoles(roles);
-        return userResponse;
+        return responseUser(user);
     }
-
 
     public UserResponse responseUser(User user) {
         UserResponse userResponse = new UserResponse();

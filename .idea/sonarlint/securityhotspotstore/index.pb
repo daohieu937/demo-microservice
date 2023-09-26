@@ -21,3 +21,11 @@ D
 user-service/pom.xml,d\2\d2f5d1978e5f519100a679c4109f89296278badc
 ~
 Nuser-service/src/main/java/com/example/userservice/UserServiceApplication.java,6\0\608f450ab50b00315e06e1f2a5c9fa12b1f68967
+‡
+Wproduct-service/src/main/java/com/example/productservice/ProductServiceApplication.java,5\b\5bcbdf9445e364485501965ac6ff6a9242756853
+}
+Muser-service/src/main/java/com/example/userservice/response/UserResponse.java,8\8\888e7b40e0989decce1400a61d60b0cace15a37c
+}
+Muser-service/src/main/java/com/example/userservice/response/RoleResponse.java,1\8\18a16202a45eb064b974d064588759b12a4b0fc3
+{
+Kuser-service/src/main/java/com/example/userservice/service/UserService.java,c\f\cfd079d80df7d987ddedf0d4232f091674b16b88

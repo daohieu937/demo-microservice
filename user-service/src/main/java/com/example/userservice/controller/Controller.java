@@ -32,6 +32,11 @@ public class Controller {
         return userService.createUser(userDto);
     }
 
+    @PostMapping ("user/register")
+    public UserResponse register(@RequestBody UserDto userDto) {
+        return userService.createUser(userDto);
+    }
+
     @DeleteMapping("user/{id}")
     public void deleteUser(@PathVariable String id) {
         userRepository.deleteById(id);
