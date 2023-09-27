@@ -1,6 +1,8 @@
 package com.example.userservice.service;
 
 import com.example.userservice.dto.UserDto;
+import com.example.userservice.exception.FormValidateException;
+import com.example.userservice.exception.UnprocessableEntityException;
 import com.example.userservice.model.Role;
 import com.example.userservice.model.User;
 import com.example.userservice.repository.RoleRepository;
@@ -49,6 +51,15 @@ public class UserService {
         userRepository.save(user);
 
         return responseUser(user);
+    }
+
+    public UserResponse registerUser(UserDto userDto) {
+        User user = userRepository.findByUsername(userDto.getUsername());
+        if (user == null) {
+            return createUser(userDto);
+        }
+
+        else throw new UnprocessableEntityException("Username đã tồn tại");
     }
 
     public UserResponse getUser(String username) {

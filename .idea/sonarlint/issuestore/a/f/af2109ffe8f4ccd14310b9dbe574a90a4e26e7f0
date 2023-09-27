@@ -1,0 +1,11 @@
+
+q
+java:S6201'"OReplace this instanceof check and cast with 'instanceof BindException customEx'(×…ˆşÿÿÿÿ8Å‘¾’­1
+o
+java:S6204,"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8Å‘¾’­1
+˜
+java:S6201."vReplace this instanceof check and cast with 'instanceof MaxUploadSizeExceededException maxuploadsizeexceededexception'(åÒœ˜ÿÿÿÿÿ8Ç‘¾’­1
+r
+java:S62015"UReplace this instanceof check and cast with 'instanceof BaseCustomException customEx'(ì•ˆè8ÍÛ‚“­1
+_
+java:S1874N"=Remove this use of "APPLICATION_JSON_UTF8"; it is deprecated.(„­Âñıÿÿÿÿ8Ë‘¾’­1

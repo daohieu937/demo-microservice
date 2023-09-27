@@ -34,7 +34,7 @@ public class Controller {
 
     @PostMapping ("user/register")
     public UserResponse register(@RequestBody UserDto userDto) {
-        return userService.createUser(userDto);
+        return userService.registerUser(userDto);
     }
 
     @DeleteMapping("user/{id}")
