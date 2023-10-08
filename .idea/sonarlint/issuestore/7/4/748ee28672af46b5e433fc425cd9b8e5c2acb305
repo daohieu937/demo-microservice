@@ -1,4 +1,2 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(÷ò·8ÖğÙ¬1
-\
-java:S1128"?Remove this unused import 'com.example.userservice.model.User'.(¹··8Ìú‰­1
+G	java:S106"+Replace this use of System.out by a logger.(÷ò·8¦‰ú®1

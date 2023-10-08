@@ -2,7 +2,7 @@ package com.example.userservice.exception.model;
 
 import lombok.*;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Getter
@@ -32,6 +32,7 @@ public class ErrorModel {
     }
     public ErrorModel(int statusCode, String message){
         this.statusCode = statusCode;
-        this.messages = Arrays.asList(message);
+        this.messages = Collections.singletonList(message);
     }
+
 }

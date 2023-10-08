@@ -1,39 +1,29 @@
 package com.example.userservice.exception.rest;
 
 import com.example.userservice.exception.BaseCustomException;
-import com.example.userservice.exception.FeignResponseException;
 import com.example.userservice.exception.model.ErrorModel;
-import lombok.extern.apachecommons.CommonsLog;
+import io.jsonwebtoken.MalformedJwtException;
 import lombok.val;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MissingRequestHeaderException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.NativeWebRequest;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
-import org.springframework.web.multipart.MultipartException;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
-@ControllerAdvice
+@RestControllerAdvice
 public class ControllerAdvisor {
-    @ExceptionHandler
-    public ResponseEntity<Object> handleException(Exception ex, WebRequest request) {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Object> handleException(Exception ex) {
         ErrorModel errorModel;
         HttpStatus httpStatus;
         if (ex instanceof BindException) {
@@ -88,5 +78,12 @@ public class ControllerAdvisor {
         ErrorModel errorModel = new ErrorModel(HttpStatus.BAD_REQUEST.value(), errorMessages);
         return new ResponseEntity<>(errorModel, header(), HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(MalformedJwtException.class)
+    public ResponseEntity<ErrorModel> handleMalformedJwtException(MalformedJwtException ex, NativeWebRequest request) {
+        ErrorModel errorModel = new ErrorModel(HttpStatus.FORBIDDEN.value(), "Invalid JWT token");
+        return new ResponseEntity<>(errorModel, header(), HttpStatus.FORBIDDEN);
+    }
+
 
 }
