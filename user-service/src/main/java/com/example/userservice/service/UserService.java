@@ -1,6 +1,6 @@
 package com.example.userservice.service;
 
-import com.example.userservice.config.JwtTokenProvider;
+import com.example.userservice.jwt.JwtTokenProvider;
 import com.example.userservice.dto.UserDto;
 import com.example.userservice.exception.UnprocessableEntityException;
 import com.example.userservice.model.LoginRequest;

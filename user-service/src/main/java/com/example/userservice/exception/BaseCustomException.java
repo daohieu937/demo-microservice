@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class       BaseCustomException extends RuntimeException{
+public abstract class BaseCustomException extends RuntimeException{
     private List<String> messages;
     private String errorCode;
 

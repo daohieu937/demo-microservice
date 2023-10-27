@@ -1,13 +1,0 @@
-
-q	java:S116"URename this field "JWT_SECRET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¼ŸŞ8ŸÜ‚¯1
-z	java:S116"YRename this field "JWT_EXPIRATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ‹Åüÿÿÿÿ8ŸÜ‚¯1
->
-java:S1170"!Make this final field static too.(¶¼ŸŞ8ŸÜ‚¯1
-C
-java:S1170"!Make this final field static too.(ƒ‹Åüÿÿÿÿ8ŸÜ‚¯1
-X
-java:S6437"6Revoke and change this password, as it is compromised.(Éù˜§øÿÿÿÿ8¤Ü‚¯1
-S
-java:S6437!"6Revoke and change this password, as it is compromised.(ÇùâŞ8¦Ü‚¯1
-X
-java:S6437*"6Revoke and change this password, as it is compromised.(ù¢á·øÿÿÿÿ8§Ü‚¯1

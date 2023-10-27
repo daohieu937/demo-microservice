@@ -1,5 +1,7 @@
 package com.example.userservice.config;
 
+import com.example.userservice.jwt.AuthEntryPointJwt;
+import com.example.userservice.jwt.JwtAuthenticationFilter;
 import com.example.userservice.service.UserJwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -48,7 +50,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/api/demo/login").permitAll() // Cho phép tất cả mọi người truy cập vào địa chỉ này
+                .antMatchers("/api/demo/user/register", "/api/demo/login")
+                .permitAll() // Cho phép tất cả mọi người truy cập vào địa chỉ này
                 .anyRequest().authenticated(); // Tất cả các request khác đều cần phải xác thực mới được truy cập
 
 //        http.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler)); // throw mess cho user
@@ -63,3 +66,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
 }
+

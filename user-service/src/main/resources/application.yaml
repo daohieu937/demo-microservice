@@ -1,0 +1,20 @@
+server:
+    port: 8080
+
+spring:
+  jpa:
+      hibernate:
+          ddl-auto: update
+  datasource:
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/user
+      username: root
+      password: 123456
+
+
+aws:
+    region: dev-daohieu
+    access-key: dev-thanhmai
+    secret-key: dev-anthanh
+    bucket-name: dev-uat-thanhmai
+    endpoint: https://thanhmai-1.amazonaws.com
+    expire-time: 3600
