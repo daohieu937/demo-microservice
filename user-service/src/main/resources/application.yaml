@@ -2,6 +2,8 @@ server:
     port: 8080
 
 spring:
+  application:
+    name: application
   jpa:
       hibernate:
           ddl-auto: update
@@ -18,3 +20,16 @@ aws:
     bucket-name: dev-uat-thanhmai
     endpoint: https://thanhmai-1.amazonaws.com
     expire-time: 3600
+
+management:
+  endpoints:
+    web:
+      base-path: /api/${spring.application.name}/health
+      exposure:
+        include: health,prometheus
+
+application:
+  logging:
+    tracing: false
+
+

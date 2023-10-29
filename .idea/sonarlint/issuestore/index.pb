@@ -87,3 +87,17 @@ Ruser-service/src/main/java/com/example/userservice/media/utils/ThrowableUtils.j
 Tuser-service/src/main/java/com/example/userservice/media/service/StorageService.java,b\4\b4ad6e6fdb95a56c4b819223e8c2d1cce99f5d6f
 ƒ
 Suser-service/src/main/java/com/example/userservice/config/StorageConfiguration.java,2\e\2e0f6472880851937b0cc5c3a480292fa036dad4
+‚
+Ruser-service/src/main/java/com/example/userservice/config/KafkaConsumerConfig.java,a\b\ab4256fe019d98f2d904621b3f3d69a68f6ceb99
+‚
+Ruser-service/src/main/java/com/example/userservice/config/KafkaProducerConfig.java,7\f\7f604eb307f4bb43934b37181fdbec94bd958c71
+Œ
+\user-service/src/main/java/com/example/userservice/logging/LogResponseBodyAdviceAdapter.java,d\8\d87187d352a80a77d7b1384e1f530767f58e7406
+‹
+[user-service/src/main/java/com/example/userservice/logging/LogRequestBodyAdviceAdapter.java,4\9\4983c93b146eefd65c46ce17504ee059142fb434
+|
+Luser-service/src/main/java/com/example/userservice/logging/RequestUtils.java,6\2\626e72a086aa7969026f559c15439eca79f618c7
+ˆ
+Xuser-service/src/main/java/com/example/userservice/logging/CommonRequestFeignConfig.java,c\9\c92370eb6ca52b01619415caf62061edfbb48584
+…
+Uuser-service/src/main/java/com/example/userservice/logging/CommonMDCLoggerFilter.java,9\2\922be7b803a7083d1fb68bf31b59e49a7f4a23a9
